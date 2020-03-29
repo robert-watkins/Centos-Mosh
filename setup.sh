@@ -11,7 +11,7 @@ dnf install mosh -yq
 iptables -I INPUT 1 -p udp --dport 60000:61000 -j ACCEPT
 service iptables save
 for user in /home/*/; do 
-    echo "LANG=\"en_US.UTF-8\"" >> /home/$user/.bashrc
-    echo "export LANG" >> /home/$user/.bashrc
+    echo "LANG=\"en_US.UTF-8\"" >> $user/.bashrc
+    echo "export LANG" >> $user/.bashrc
 done
 echo Done
